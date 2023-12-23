@@ -5,6 +5,10 @@ files:
     destination: /home/ec2-user/ci-cd_expressjs
 hooks:
 # Install:
+  BeforeInstall:
+    - location: scripts/before_install.sh
+      timeout: 300
+      runas: root
   AfterInstall:
     - location: scripts/after_install.sh
       timeout: 300
