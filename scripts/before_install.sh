@@ -1,14 +1,14 @@
 #!/bin/bash
 
-yes Y | sudo yum update
-yes Y | sudo yum upgrade
-yes Y | sudo yum install -y git
+sudo yum update -y
+sudo yum upgrade -y
+sudo yum install -y git
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 . ~/.nvm/nvm.sh
 nvm install --lts
 
-sudo npm install pm2@latest -g
+npm install pm2@latest -g
 
 sudo ln -s "$(which node)" /sbin/node
 sudo ln -s "$(which npm)" /sbin/npm
