@@ -2,10 +2,10 @@ const express = require('express');
 const axios = require('axios')
 
 const app = express();
-const port = 3000;
+const port = 3001;
 
 app.get('/', (req, res) => {
-  res.send('<h1>Express Demo App</h1> <h4>Message Success</h4> <p>Version: 1.4<p>');
+  res.send('<h1>Express Demo App</h1> <h4>Success Message: Application deployed via CodeDeploy.</h4> <p>Version: 1.4<p>');
 });
 
 app.get('/items', (req, res) => {
