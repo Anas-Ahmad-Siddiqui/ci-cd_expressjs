@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+echo 'Starting before_install.sh'
+
 # Function to check if a package is installed
 is_package_installed() {
   command -v "$1" >/dev/null 2>&1
@@ -79,3 +82,5 @@ if [ ! -d "$directory" ]; then
 else
     echo "Directory $directory already exists."
 fi
+
+echo 'Finishing before_install.sh'
